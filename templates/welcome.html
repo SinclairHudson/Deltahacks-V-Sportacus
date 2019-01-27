@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" />
+	<link rel="stylesheet" href="https://use.typekit.net/ycr7cpk.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Welcome</title>
+</head>
+<nav>
+	<div class="logo"><img src="{{ url_for('static', filename='images/Logo white.svg') }}"></div>
+  <a href="/login">Log In</a>
+</nav>
+	<body class="main">
+	<div class="spread">
+		<h1>Welcome, {{ user.username }}</h1>
+		<h2>What's the Gameplan Today?</h2>
+		<a href="/profile/{{ user.email }}">View Profile</a>
+		<a href="/potentialmatches/{{ user.email }}">Find A Partner</a>
+	</div>
+</body>
+</html>

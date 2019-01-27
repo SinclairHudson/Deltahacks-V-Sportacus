@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" />
+	<link rel="stylesheet" href="https://use.typekit.net/ycr7cpk.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/svg+xml" href="Logo orange.svg"> 
+<title>Edit Profile</title>
+</head>
+<nav>
+	<div class="logo"><img src="{{ url_for('static', filename='images/Logo white.svg') }}"></div>
+  <a href="login.html">Log In</a>
+</nav>
+<body class="main">
+	<br><br><br>
+<div class="bio"> 
+	<form method="post" action="/post_user">
+	<h3>Username:</h3>
+	<input id="username" name="username" type="text" />
+	<h3>Email:</h3>
+	<input id="email" name="email" type="text" />
+	<h3>Contact:</h3>
+	<input id="contact" name="contact" type="text" />
+	<h3>Bio:</h3>
+  	<textarea id="bio" name="bio" rows="10" cols="100">
+		{{ user.bio }}
+		</textarea>
+	<h3>Interests:</h3>
+	<input id="interests" name="interests" type="text" />
+    <br><br>
+    <input type="submit"/>
+    </form>
+  <a href="editprofile.html">Edit Profile</a>
+		</div>
+</body>
+</html>
+

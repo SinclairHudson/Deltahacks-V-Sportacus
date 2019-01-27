@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" />
+	<link rel="stylesheet" href="https://use.typekit.net/ycr7cpk.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='images/Logo orange.svg') }}">
+<title>View Profile</title>
+</head>
+<nav>
+	<div class="logo"><img src="{{ url_for('static', filename='images/Logo white.svg') }}"></div>
+  <a href="/login">Log In</a>
+</nav>
+<body class="main">
+	<br><br><br>
+<div class="bio"> 
+	<h1>{{ user.username }}</h1>
+	<h3>Points:</h3>
+	<p>{{ user.points }}</p>
+	<h3>Contact:</h3>
+	<p>{{ user.contact }}</p>
+	<h3>Email:</h3>
+	<p>{{ user.email }}</p>
+	<h3>Bio</h3>
+  <p>
+    {{ user.bio }}
+  </p>
+	<h3>Interests</h3>
+	<p>{{ user.interests}}</p>
+  <a href="/editprofile/{{ user.email }}">Edit Profile</a>
+		</div>
+</body>
+</html>
