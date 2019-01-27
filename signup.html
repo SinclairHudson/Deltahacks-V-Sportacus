@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+	<meta charset="utf-8">
+	<link href="main.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="https://use.typekit.net/ycr7cpk.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign up</title>
+</head>
+<nav>
+	<a href="index.html"><div class="logo"><img src="Logo white.svg"></div></a>
+  <a href="login.html" class="buttons">Log In</a>
+</nav>
+<body class="main">
+	<br><br><br>
+	<h5>Sign up</h5>
+<script type="text/javascript">
+
+  function checkForm(form)
+  {
+    if(form.pwd1.value != "" && form.pwd1.value == form.pwd2.value) {
+      if(form.pwd1.value.length < 6) {
+        alert("Error: Password must contain at least six characters!");
+        form.pwd1.focus();
+        return false;
+      }
+      if(form.pwd1.value == form.username.value) {
+        alert("Error: Password must be different from Username!");
+        form.pwd1.focus();
+        return false;
+      }
+      re = /[0-9]/;
+      if(!re.test(form.pwd1.value)) {
+        alert("Error: password must contain at least one number (0-9)!");
+        form.pwd1.focus();
+        return false;
+      }
+      re = /[a-z]/;
+      if(!re.test(form.pwd1.value)) {
+        alert("Error: password must contain at least one lowercase letter (a-z)!");
+        form.pwd1.focus();
+        return false;
+      }
+      re = /[A-Z]/;
+      if(!re.test(form.pwd1.value)) {
+        alert("Error: password must contain at least one uppercase letter (A-Z)!");
+        form.pwd1.focus();
+        return false;
+      }
+    } else {
+      alert("Error: Please check that you've entered and confirmed your password!");
+      form.pwd1.focus();
+      return false;
+    }
+
+    alert("You entered a valid password: " + form.pwd1.value);
+    return true;
+  }
+
+</script>
+		<div class="login">
+			<form action="/signup" method="POST" name="sign_up_form" onsubmit="return checkForm(this)">
+      <input id="next" name="next" type="hidden" value="">
+    <input id="csrf_token" name="csrf_token" type="hidden" value="ImU3ZDU4MzM2ODQ2M2FhYTQyYzhhODM1ZGRlZjQwZGNiMjMxMzJhOGQi.XE2M-Q.7uPcnhaWlEus1RBWXcJs0SRgRQY">
+
+      <p>
+        <label for="email">Email Address</label><br>
+          <input id="email" name="email" required type="text" value="">
+      </p>
+      <p>
+        <label for="pwd1">Password</label><br>
+
+          <input id="pwd1" name="pwd1" required type="password" value="">
+      </p>
+      <p>
+        <label for="pwd2">Confirm password</label><br>
+          <input id="pwd2" name="pwd2" required type="password" value="">
+
+      </p>
+  <p>
+    <label for="remember">Remember Me</label> <input id="remember" name="remember" type="checkbox" value="y">
+  </p>
+				<p><input id="next" name="next" type="hidden" value=""></p>
+
+  <p><input id="submit" name="submit" type="submit" value="Sign up!"></p>
+
+</form>
+</div>
+
+</body>
+</html>
