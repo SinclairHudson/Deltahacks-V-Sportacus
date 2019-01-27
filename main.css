@@ -94,9 +94,9 @@ nav{
 	background: rgba(241, 145, 38, 0.7);
 	overflow: hidden;
 }
-nav a {
-  text-align: center;
+.buttons{
 	float: right;
+	text-align: center;
 	color: #FFFFFF;
 	padding: 10px;
 	display: table;
@@ -109,10 +109,10 @@ nav a {
 	font-family: myriad-pro, sans-serif;
 	font-weight: 600;
 	font-style: normal;
-}
-
-a{
-	align-self: center;
+	left: 50%;
+	}
+nav a .buttons{
+	float: right;
 	text-align: center;
 	color: #FFFFFF;
 	padding: 10px;
@@ -210,16 +210,6 @@ a:hover {
 	padding-bottom: 25%;
 	align-content: center;
 	align: center;
-}
-.buttons{
-	text-align: center;
-	float: right;
-	width: 10%;
-	display: table;
-	content: "";
-	border: 2px solid #FFFFFF;
-	border-radius: 15px;
-	margin: 1.5%;
 }
 hr{
 	border-width: thick;
