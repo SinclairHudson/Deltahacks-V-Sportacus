@@ -62,10 +62,13 @@ p{
 h4 {
 	line-height: 20%;
 	text-align: left;
-	font-size: 5vw;
-	color:#3AAFA9;
+	font-size: 1.5vw;
+	color:#F1950E;
 	margin-bottom: 3vw;
 	padding: 15px;
+}
+hr{
+	color: #F09918;	
 }
 nav{
 	position: fixed;
@@ -120,6 +123,9 @@ a{
 	content: "";
 	background: #FFFFFF;
 	margin: 1.5%;
+}
+.person img{
+	border-radius: 50%;
 }
 a:hover {
   background-color: rgba(255, 255, 255, 0.7);
