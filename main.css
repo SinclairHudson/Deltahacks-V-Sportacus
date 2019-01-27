@@ -62,6 +62,7 @@ input[type=submit] {
 .logo{
 	float:left;
 	width: 6%;
+	text-align: left;
 }
 img{
 	width: 100%;
@@ -74,13 +75,15 @@ h3 {
 }
 p{
 	text-align: left;
+	margin-top: 1vw;
+	margin-bottom: 1vw;
 }
 h4 {
 	line-height: 20%;
 	text-align: left;
 	font-size: 1.5vw;
 	color:#F1950E;
-	margin-bottom: 3vw;
+	margin-bottom: 0px;
 	padding: 15px;
 }
 hr{
@@ -219,11 +222,17 @@ hr{
 .col-1 {width: 8.33%;}
 .col-2 {width: 16.66%;}
 .col-3 {width: 25%;}
-.col-4 {width: 33.33%;}
+.col-4 {
+	width: 33.33%;
+	color: #F09918;
+}
 .col-5 {width: 41.66%;}
 .col-6 {width: 50%;}
 .col-7 {width: 58.33%;}
-.col-8 {width: 66.66%;}
+.col-8 {
+	width: 66.66%;
+	text-align: left;
+}
 .col-9 {width: 75%;}
 .col-10 {width: 83.33%;}
 .col-11 {width: 91.66%;}
@@ -343,12 +352,5 @@ ul li:hover ul {
 		line-height: 20%;
 		text-align: left;
 		font-size: 3vw;
-	}
-	.col-4{
-		width: 100%;
-	}
-	.col-8{
-		width: 100%;
-		font-size: 3.0vw;
 	}
 }
