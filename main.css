@@ -170,7 +170,8 @@ a{
 	
 }
 .bio h3{
-	
+	font-size: 2vw;
+	line-height: 10px;
 }
 .person img{
 	border-radius: 50%;
